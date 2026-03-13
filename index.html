@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scott Monaco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --black: #0d0d0d;
+      --muted: #999;
+      --gap: 3px;
+    }
+
+    html, body {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px 28px;
+      gap: 18px;
+    }
+
+    .logo {
+      width: clamp(160px, 45vw, 260px);
+      height: auto;
+      display: block;
+    }
+
+    /* ============================================================
+       SUBSCRIBE BUTTON FONT — change 'Bebas Neue' to any Google Font
+       ============================================================ */
+    .substack-btn {
+      display: inline-block;
+      padding: 10px 28px;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Bebas Neue', sans-serif; /* ← CHANGE FONT HERE */
+      font-size: 15px;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .substack-btn:hover {
+      background: #333;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #ddd;
+    }
+
+    /* ============================================================
+       INSTRUCTION TEXT FONT — change 'Cormorant Garamond' to any Google Font
+       ============================================================ */
+    .instruction {
+      font-family: 'Cormorant Garamond', serif; /* ← CHANGE FONT HERE */
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(13px, 3vw, 15px);
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+      padding: var(--gap);
+    }
+
+    .card {
+      position: relative;
+      aspect-ratio: 9/16;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+    }
+
+    /* All images start slightly desaturated and dimmed */
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(40%) brightness(0.82);
+      transition: filter 0.4s ease, transform 0.5s ease;
+    }
+
+    /* Hover: full color, full brightness, slight zoom */
+    .card:hover img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      color: #bbb;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 32px 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="logo.png" alt="Scott Monaco" />
+    <a class="substack-btn" href="https://bsmonaco.substack.com" target="_blank">Subscribe to the Newsletter</a>
+    <div class="divider"></div>
+    <p class="instruction">Click on a story to read</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- STORY 1 — Post #58: The Glowing Rectangles -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-glowing-rectangles?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-58.jpeg" alt="The Glowing Rectangles" loading="lazy" />
+    </a>
+
+    <!-- STORY 2 — Post #57: Most Travel Advice is Written for Someone Else -->
+    <a class="card" href="https://bsmonaco.substack.com/p/most-travel-advice-is-written-for?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-57.jpeg" alt="Most Travel Advice is Written for Someone Else" loading="lazy" />
+    </a>
+
+    <!-- STORY 3 — Post #56: A Land Before Time -->
+    <a class="card" href="https://bsmonaco.substack.com/p/a-land-before-time?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-56.jpeg" alt="A Land Before Time" loading="lazy" />
+    </a>
+
+    <!-- STORY 4 — Post #55: Terms of Entry -->
+    <a class="card" href="https://bsmonaco.substack.com/p/terms-of-entry?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-55.jpeg" alt="Terms of Entry" loading="lazy" />
+    </a>
+
+    <!-- STORY 5 — Post #54: Everyone is One Text Away from Canceling -->
+    <a class="card" href="https://bsmonaco.substack.com/p/everyone-is-one-text-away-from-cancelling?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-54.jpeg" alt="Everyone is One Text Away from Canceling" loading="lazy" />
+    </a>
+
+    <!-- STORY 6 — Post #53: Continue Without a Seat -->
+    <a class="card" href="https://bsmonaco.substack.com/p/continue-without-a-seat?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-53.jpeg" alt="Continue Without a Seat" loading="lazy" />
+    </a>
+
+    <!-- STORY 7 — Post #52: Breakfast is Included -->
+    <a class="card" href="https://bsmonaco.substack.com/p/breakfast-is-included?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-52.jpeg" alt="Breakfast is Included" loading="lazy" />
+    </a>
+
+    <!-- STORY 8 — Post #51: A Broken Passport Still Works -->
+    <a class="card" href="https://bsmonaco.substack.com/p/a-broken-passport-still-works?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-51.jpeg" alt="A Broken Passport Still Works" loading="lazy" />
+    </a>
+
+    <!-- STORY 9 — Post #50: You're Not Here to Be Interesting -->
+    <a class="card" href="https://bsmonaco.substack.com/p/youre-not-here-to-be-interesting?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-50.jpeg" alt="You're Not Here to Be Interesting" loading="lazy" />
+    </a>
+
+    <!-- STORY 10 — Post #49: Limited Visibility -->
+    <a class="card" href="https://bsmonaco.substack.com/p/limited-visibility?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-49.jpeg" alt="Limited Visibility" loading="lazy" />
+    </a>
+
+    <!-- STORY 11 — Post #48: The Work of Continuity -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-work-of-continuity?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-48.jpeg" alt="The Work of Continuity" loading="lazy" />
+    </a>
+
+    <!-- STORY 12 — Post #47: Scott Monaco Guide: Zimbabwe's Eastern Highlands -->
+    <a class="card" href="https://bsmonaco.substack.com/p/scott-monaco-guide-zimbabwes-eastern?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-47.jpeg" alt="Scott Monaco Guide: Zimbabwe's Eastern Highlands" loading="lazy" />
+    </a>
+
+    <!-- STORY 13 — Post #46: What We Should Expect to See is What We Will See -->
+    <a class="card" href="https://bsmonaco.substack.com/p/what-we-should-expect-to-see-is-what?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-46.jpeg" alt="What We Should Expect to See is What We Will See" loading="lazy" />
+    </a>
+
+    <!-- STORY 14 — Post #45: The Abscess -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-abscess?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-45.jpeg" alt="The Abscess" loading="lazy" />
+    </a>
+
+    <!-- STORY 15 — Post #44: 25 Books That Will Change the Way You See the World -->
+    <a class="card" href="https://bsmonaco.substack.com/p/25-books-that-will-change-the-way?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-44.jpeg" alt="25 Books That Will Change the Way You See the World" loading="lazy" />
+    </a>
+
+    <!-- STORY 16 — Post #43: The Safari Big Five -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-safari-big-five?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-43.jpeg" alt="The Safari Big Five" loading="lazy" />
+    </a>
+
+    <!-- STORY 17 — Post #42: How to Move Through the World -->
+    <a class="card" href="https://bsmonaco.substack.com/p/how-to-move-through-the-world?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-42.jpeg" alt="How to Move Through the World" loading="lazy" />
+    </a>
+
+    <!-- STORY 18 — Post #41: Between Light and Shadow -->
+    <a class="card" href="https://bsmonaco.substack.com/p/between-light-and-shadow?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-41.jpeg" alt="Between Light and Shadow" loading="lazy" />
+    </a>
+
+    <!-- STORY 19 — Post #40: Scott Monaco Guide: Chinese Restaurants Around the World -->
+    <a class="card" href="https://bsmonaco.substack.com/p/scott-monaco-guide-chinese-restaurants?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-40.jpeg" alt="Scott Monaco Guide: Chinese Restaurants Around the World" loading="lazy" />
+    </a>
+
+    <!-- STORY 20 — Post #39: The World's Most Successful Brand Isn't a Brand -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-worlds-most-successful-brand?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-39.jpeg" alt="The World's Most Successful Brand Isn't a Brand" loading="lazy" />
+    </a>
+
+    <!-- STORY 21 — Post #38: Assembly Required -->
+    <a class="card" href="https://bsmonaco.substack.com/p/assembly-required?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-38.jpeg" alt="Assembly Required" loading="lazy" />
+    </a>
+
+    <!-- STORY 22 — Post #37: You Can Never Return to the Same Place -->
+    <a class="card" href="https://bsmonaco.substack.com/p/you-can-never-return-to-the-same?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-37.jpeg" alt="You Can Never Return to the Same Place" loading="lazy" />
+    </a>
+
+    <!-- STORY 23 — Post #36: Scott Monaco Guide: Rwanda -->
+    <a class="card" href="https://bsmonaco.substack.com/p/scott-monaco-guide-rwanda?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-36.jpeg" alt="Scott Monaco Guide: Rwanda" loading="lazy" />
+    </a>
+
+    <!-- STORY 24 — Post #35: The Elephant in the Headlights -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-elephant-in-the-headlights?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-35.jpeg" alt="The Elephant in the Headlights" loading="lazy" />
+    </a>
+
+    <!-- STORY 25 — Post #34: The Ritual of Autumn -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-ritual-of-autumn?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-34.jpeg" alt="The Ritual of Autumn" loading="lazy" />
+    </a>
+
+    <!-- STORY 26 — Post #33: Your Favorite Trip Was Probably a Disaster -->
+    <a class="card" href="https://bsmonaco.substack.com/p/your-favorite-trip-was-probably-a?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-33.jpeg" alt="Your Favorite Trip Was Probably a Disaster" loading="lazy" />
+    </a>
+
+    <!-- STORY 27 — Post #32: The Maltese Road Test -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-maltese-road-test?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-32.jpeg" alt="The Maltese Road Test" loading="lazy" />
+    </a>
+
+    <!-- STORY 28 — Post #31: Artificial Dreams -->
+    <a class="card" href="https://bsmonaco.substack.com/p/artificial-dreams?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-31.jpeg" alt="Artificial Dreams" loading="lazy" />
+    </a>
+
+    <!-- STORY 29 — Post #30: So You Think in English? -->
+    <a class="card" href="https://bsmonaco.substack.com/p/so-you-think-in-english?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-30.jpeg" alt="So You Think in English?" loading="lazy" />
+    </a>
+
+    <!-- STORY 30 — Post #29: Scott Monaco Guide: Liechtenstein -->
+    <a class="card" href="https://bsmonaco.substack.com/p/scott-monaco-guide-liechtenstein?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-29.jpeg" alt="Scott Monaco Guide: Liechtenstein" loading="lazy" />
+    </a>
+
+    <!-- STORY 31 — Post #28: Across A Country on Foot -->
+    <a class="card" href="https://bsmonaco.substack.com/p/across-a-country-on-foot?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-28.jpeg" alt="Across A Country on Foot" loading="lazy" />
+    </a>
+
+    <!-- STORY 32 — Post #27: Read Your Way Through Hong Kong -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-hong-kong?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-27.jpeg" alt="Read Your Way Through Hong Kong" loading="lazy" />
+    </a>
+
+    <!-- STORY 33 — Post #26: Come Find Your Summer Memory -->
+    <a class="card" href="https://bsmonaco.substack.com/p/come-find-your-summer-memory?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-26.jpeg" alt="Come Find Your Summer Memory" loading="lazy" />
+    </a>
+
+    <!-- STORY 34 — Post #25: You've Been Traveling Wrong Your Whole Life -->
+    <a class="card" href="https://bsmonaco.substack.com/p/youve-been-traveling-wrong-your-whole?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-25.jpeg" alt="You've Been Traveling Wrong Your Whole Life" loading="lazy" />
+    </a>
+
+    <!-- STORY 35 — Post #24: You Weren't Supposed to Be Here -->
+    <a class="card" href="https://bsmonaco.substack.com/p/you-werent-supposed-to-be-here?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-24.jpeg" alt="You Weren't Supposed to Be Here" loading="lazy" />
+    </a>
+
+    <!-- STORY 36 — Post #23: Breaking: Cultural Offense Tariffs Enacted -->
+    <a class="card" href="https://bsmonaco.substack.com/p/breaking-cultural-offense-tariffs?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-23.jpeg" alt="Breaking: Cultural Offense Tariffs Enacted" loading="lazy" />
+    </a>
+
+    <!-- STORY 37 — Post #22: The Room That Didn't Let Go -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-room-that-didnt-let-go?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-22.jpeg" alt="The Room That Didn't Let Go" loading="lazy" />
+    </a>
+
+    <!-- STORY 38 — Post #21: The Overhead Bin -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-overhead-bin?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-21.jpeg" alt="The Overhead Bin" loading="lazy" />
+    </a>
+
+    <!-- STORY 39 — Post #20: Let's Be Honest: You're Not Going to Wuhan -->
+    <a class="card" href="https://bsmonaco.substack.com/p/lets-be-honest-youre-not-going-to?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-20.jpeg" alt="Let's Be Honest: You're Not Going to Wuhan" loading="lazy" />
+    </a>
+
+    <!-- STORY 40 — Post #19: Read Your Way Through Thailand -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-thailand?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-19.jpeg" alt="Read Your Way Through Thailand" loading="lazy" />
+    </a>
+
+    <!-- STORY 41 — Post #18: Bonus Day in Brighton -->
+    <a class="card" href="https://bsmonaco.substack.com/p/bonus-day-in-brighton?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-18.jpeg" alt="Bonus Day in Brighton" loading="lazy" />
+    </a>
+
+    <!-- STORY 42 — Post #17: What Do You Do When You Can't Say No -->
+    <a class="card" href="https://bsmonaco.substack.com/p/what-do-you-do-when-you-cant-say?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-17.jpeg" alt="What Do You Do When You Can't Say No" loading="lazy" />
+    </a>
+
+    <!-- STORY 43 — Post #16: Read Your Way Through the American Road Trip -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-the-american?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-16.jpeg" alt="Read Your Way Through the American Road Trip" loading="lazy" />
+    </a>
+
+    <!-- STORY 44 — Post #15: Instructions for Getting Lost in Mongolia -->
+    <a class="card" href="https://bsmonaco.substack.com/p/instructions-for-getting-lost-in" target="_blank">
+      <img src="images/scott-monaco-post-15.jpeg" alt="Instructions for Getting Lost in Mongolia" loading="lazy" />
+    </a>
+
+    <!-- STORY 45 — Post #14: In Praise of Damp Socks -->
+    <a class="card" href="https://bsmonaco.substack.com/p/in-praise-of-damp-socks?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-14.jpeg" alt="In Praise of Damp Socks" loading="lazy" />
+    </a>
+
+    <!-- STORY 46 — Post #13: Read Your Way Through Singapore -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-singapore?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-13.jpeg" alt="Read Your Way Through Singapore" loading="lazy" />
+    </a>
+
+    <!-- STORY 47 — Post #12: Someone Else's Laptop -->
+    <a class="card" href="https://bsmonaco.substack.com/p/someone-elses-laptop?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-12.jpeg" alt="Someone Else's Laptop" loading="lazy" />
+    </a>
+
+    <!-- STORY 48 — Post #11: The Shanghai I Can't Let Go -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-shanghai-i-cant-let-go?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-11.jpeg" alt="The Shanghai I Can't Let Go" loading="lazy" />
+    </a>
+
+    <!-- STORY 49 — Post #10: Read Your Way Through Cuba -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-cuba?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-10.jpeg" alt="Read Your Way Through Cuba" loading="lazy" />
+    </a>
+
+    <!-- STORY 50 — Post #9: The Man Who Looked Like Moby -->
+    <a class="card" href="https://bsmonaco.substack.com/p/the-man-who-looked-like-moby?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-9.jpeg" alt="The Man Who Looked Like Moby" loading="lazy" />
+    </a>
+
+    <!-- STORY 51 — Post #8: Though the City, Not to It -->
+    <a class="card" href="https://bsmonaco.substack.com/p/through-the-city-not-to-it?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-8.jpeg" alt="Though the City, Not to It" loading="lazy" />
+    </a>
+
+    <!-- STORY 52 — Post #7: Read Your Way Through India -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-india?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-7.jpeg" alt="Read Your Way Through India" loading="lazy" />
+    </a>
+
+    <!-- STORY 53 — Post #6: Go To Sleep, You Never Saw Them -->
+    <a class="card" href="https://bsmonaco.substack.com/p/go-to-sleep-you-never-saw-them?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-6.jpeg" alt="Go To Sleep, You Never Saw Them" loading="lazy" />
+    </a>
+
+    <!-- STORY 54 — Post #5: Technically, He Could Have Flown -->
+    <a class="card" href="https://bsmonaco.substack.com/p/technically-he-could-have-flown?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-5.jpeg" alt="Technically, He Could Have Flown" loading="lazy" />
+    </a>
+
+    <!-- STORY 55 — Post #4: Dancing with the Divine -->
+    <a class="card" href="https://bsmonaco.substack.com/p/dancing-with-the-divine?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-4.jpeg" alt="Dancing with the Divine" loading="lazy" />
+    </a>
+
+    <!-- STORY 56 — Post #3: Read Your Way Through Sweden -->
+    <a class="card" href="https://bsmonaco.substack.com/p/read-your-way-through-sweden?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-3.jpeg" alt="Read Your Way Through Sweden" loading="lazy" />
+    </a>
+
+    <!-- STORY 57 — Post #2: Dear Taipei, This Is Getting Ridiculous -->
+    <a class="card" href="https://bsmonaco.substack.com/p/dear-taipei-this-is-getting-ridiclous?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-2.jpeg" alt="Dear Taipei, This Is Getting Ridiculous" loading="lazy" />
+    </a>
+
+    <!-- STORY 58 — Post #1: A Reasonable Man Would've Stayed Home -->
+    <a class="card" href="https://bsmonaco.substack.com/p/a-reasonable-man-wouldve-stayed-home?utm_source=instagram&utm_medium=linkinbio&utm_campaign=grid" target="_blank">
+      <img src="images/scott-monaco-post-1.jpeg" alt="A Reasonable Man Would've Stayed Home" loading="lazy" />
+    </a>
+
+  </main>
+
+  <footer>
+    © Scott Monaco · all rights reserved
+  </footer>
+
+</body>
+</html>
